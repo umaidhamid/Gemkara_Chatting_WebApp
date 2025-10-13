@@ -1,0 +1,213 @@
+/* Main background container */
+.main-div {
+  background-image: url("../../assets/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  text-transform: capitalize;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Registration box */
+.container {
+  /* margin-top: 100px; */
+  width: 100%;
+  /* height: 500px; */
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Heading section */
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 1.7rem;
+  color: #1151ab;
+  font-weight: 700;
+}
+
+.heading p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.success-message {
+  padding: 0.5rem 0.3rem;
+  top: 0;
+  margin: 10px;
+  border-radius: 20px;
+  transition: all 400ms ease;
+}
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+input {
+  padding: 0.6rem 0.8rem;
+  /* border-radius: 6px; */
+  border: none;
+  border-bottom: 2px solid black;
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.4);
+  outline: none;
+}
+
+/* Checkbox styling */
+.checkboxField {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Button */
+.button {
+  padding: 0.75rem;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1e40af;
+}
+
+/* Login link */
+.BackLoginLink {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.BackLoginLink a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.BackLoginLink a:hover {
+  text-decoration: underline;
+}
+
+/* Quotes (hidden on small screens) */
+.quote1,
+.quote2,
+.quote3,
+.quote4 {
+  position: absolute;
+  display: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+@media (min-width: 1024px) {
+  .quote1 {
+    display: block;
+    top: 10%;
+    left: 8%;
+    font-size: 1.8rem;
+    width: 30%;
+  }
+
+  .quote2 {
+    display: block;
+    bottom: 10%;
+    right: 8%;
+    font-size: 1.4rem;
+    width: 30%;
+    text-align: right;
+  }
+
+  .quote3 {
+    display: block;
+    top: 15%;
+    right: 10%;
+    font-size: 1.6rem;
+    font-style: italic;
+    width: 35%;
+    text-align: right;
+  }
+
+  .quote4 {
+    display: block;
+    bottom: 10%;
+    left: 10%;
+    font-size: 1.3rem;
+    width: 35%;
+    color: #444;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .heading p {
+    font-size: 0.85rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+
+  .quote1,
+  .quote2,
+  .quote3,
+  .quote4 {
+    display: none;
+  }
+}

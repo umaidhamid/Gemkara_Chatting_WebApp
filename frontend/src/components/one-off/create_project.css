@@ -1,0 +1,158 @@
+/* Background Overlay */
+#create_project_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+/* Main Popup Container */
+#create_project_container {
+  width: 30vw;
+  min-width: 280px;
+  background: linear-gradient(180deg, #2a77cecc 70%, #6a39b4cc 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: popupFade 0.3s ease-in-out;
+}
+
+/* Heading */
+#create_project_heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+#create_project_heading:hover {
+  transform: scale(1.05);
+}
+
+/* Form */
+#create_project_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input Field */
+#create_project_input {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+#create_project_input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Buttons */
+#create_project_buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+#cancel_btn,
+#create_btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#cancel_btn {
+  background: #e74c3c;
+}
+
+#cancel_btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+#create_btn {
+  background: #3498db;
+}
+
+#create_btn:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Notification Message */
+#create_project_notify {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animation */
+@keyframes popupFade {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 720px) {
+  #create_project_container {
+    width: 70vw;
+    padding: 15px;
+  }
+
+  #create_project_heading {
+    font-size: 1.3rem;
+  }
+
+  #create_project_input {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  #create_project_container {
+    width: 90vw;
+    padding: 12px;
+  }
+
+  #create_project_heading {
+    font-size: 1.1rem;
+  }
+
+  #create_project_input {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  #cancel_btn,
+  #create_btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
