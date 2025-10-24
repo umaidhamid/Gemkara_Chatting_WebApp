@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Home.css";
 import Sidebar from "../../components/Home/SideBar/Sidebar.jsx";
-import Chat from "../../components/Home/chat/chat.jsx";
+import Chat from "../../components/Home/chat/Chat.jsx";
 import Group from "../../components/Home/group/Group.jsx";
 import { ThemeContext } from "../../context/themeContext.jsx";
 import { Sun, Moon } from "lucide-react";
@@ -46,26 +46,27 @@ const Home = () => {
 
       {/* Main Content */}
       {/* <ViewProvider> */}
-        <ScreenViewProvider>
-          <div id="content_wrapper" className="flex">
-            <div id="sidebar_section">
-              <Sidebar activeTab={activeTab} setactiveTab={setactiveTab} />
-            </div>
-
-            {activeTab === "chat" && (
-              <div id="chat_section">
-                <Chat activeTab={activeTab} />
-              </div>
-            )}
-
-            {activeTab === "group" && (
-              <div id="group_section">
-                <Group activeTab={activeTab} />
-                <Chat_screen />
-              </div>
-            )}
+      <ScreenViewProvider>
+        <div id="content_wrapper" className="flex">
+          <div id="sidebar_section">
+            <Sidebar activeTab={activeTab} setactiveTab={setactiveTab} />
           </div>
-        </ScreenViewProvider>
+
+          {activeTab === "chat" && (
+            <div id="chat_section">
+              <Chat activeTab={activeTab} />
+              <Chat_screen />
+            </div>
+          )}
+
+          {activeTab === "group" && (
+            <div id="group_section">
+              <Group activeTab={activeTab} />
+              <Chat_screen />
+            </div>
+          )}
+        </div>
+      </ScreenViewProvider>
       {/* </ViewProvider> */}
     </div>
   );

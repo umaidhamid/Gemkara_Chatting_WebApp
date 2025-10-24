@@ -1,5 +1,42 @@
 .WholeScreen_chat {
-  background-color: yellow;
-  width: 100%;
+  /* background-color: rgba(92, 92, 41, 0.429); */
+  /* width: 100%; */
   height: 100vh;
+  font-size: xx-large;
+}
+#line {
+  font-size: xx-large;
+  color: white;
+}
+
+#Heading_section {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 7px;
+  font-size: 2rem;
+  border-bottom: 2px solid black;
+  text-transform: capitalize;
+  color: white;
+}
+#Name {
+  font-weight: bold;
+  /* font-size: 2rem; */
+}
+#Close {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+#Close:hover {
+  color: #fff;
+  /* background: #000; */
 }

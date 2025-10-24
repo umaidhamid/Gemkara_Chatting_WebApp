@@ -1,20 +1,5 @@
 /* ================= Default (Large Screens) ================= */
-#view_card {
-  width: 100%;
-  height: 10vh;
-  max-width: 400px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border-radius: 1rem;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); */
 
-  color: white;
-  /* background: linear-gradient(180deg, #2a77cecc 70%, #6a39b4cc 100%); */
-  /* background-color: black; */
-  max-height: 100vh;
-}
 #view_card:hover {
   transform: scale(1px);
   background-color: black;

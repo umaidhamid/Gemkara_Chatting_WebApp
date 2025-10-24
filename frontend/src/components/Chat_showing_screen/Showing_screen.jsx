@@ -1,21 +1,28 @@
 import React, { useContext } from "react";
 // import { ViewContext } from "../../context/ViewContext.jsx";
 import { ViewChatScreen } from "../../context/Showing_chat.context.jsx";
+import "./Showing_screen.css";
 const Showing_screen = () => {
   // const { viewScreen } = useContext(ViewContext);
-  const { ViewChat, setViewChat, viewScreen } = useContext(ViewChatScreen);
+  const { ViewChat, setViewChat, viewScreen, setViewScreen } =
+    useContext(ViewChatScreen);
   // ✅ If viewScreen is null, show a placeholder
   if (!viewScreen) {
-    return <div id="WholeScreen_chat">Select a project to view details</div>;
+    return (
+      <div id="line" className=" flex-1 w-full h-full flex items-center justify-center  ">
+       Start Chat
+      </div>
+    );
   }
   console.log(ViewChat);
   return (
-    <div>
-      <div>
-        <h2>{viewScreen.name}</h2>
-        <button
+    <div id="WholeScreen_chat" className="WholeScreen_chat flex-1 ">
+      <div id="Heading_section">
+        <h2 id="Name">{viewScreen.name}</h2>
+        <button id="Close"
+          className="bg-red-900"
           onClick={(e) => {
-            setViewChat(!ViewChat);
+            setViewScreen(false);
           }}
         >
           X

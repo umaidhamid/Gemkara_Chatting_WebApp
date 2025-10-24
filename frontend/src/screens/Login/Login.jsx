@@ -28,7 +28,7 @@ const Login = ({ setLogin }) => {
       })
       .catch((error) => {
         console.error("There was an error!", error);
-        setSuccessMsg(error);
+        setSuccessMsg(error.response.data.message || "Login failed!");
       });
   }
 

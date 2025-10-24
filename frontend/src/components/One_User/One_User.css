@@ -1,0 +1,80 @@
+/* Container for each friend */
+#view_friend {
+  width: 100%;
+  max-width: 400px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 3rem 1rem;
+  border-radius: 2rem;
+  /* background: linear-gradient(180deg, #2a77cecc 70%, #6a39b4cc 100%); */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+#view_friend:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Photo section */
+#view_photo {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff33; /* light overlay for demo */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Info section */
+#view_info {
+  flex: 1; /* take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#view_name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#view_email {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #e0e0e0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Button */
+#view_friend button {
+  background-color: #ffffff33;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+#view_friend button:hover {
+  background-color: #ffffff55;
+  transform: scale(1.05);
+}

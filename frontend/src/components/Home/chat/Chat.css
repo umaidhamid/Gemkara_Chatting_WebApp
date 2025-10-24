@@ -1,4 +1,11 @@
 /* Main Chat Wrapper */
+.ShowFriendRoot{
+    width: 100% ;
+    height: auto; 
+    padding: 5px;
+border: #ffd700 2px solid;
+border-radius: 10px;
+}
 #chat_view {
   height: 100%;
   width: 28%;
@@ -14,6 +21,8 @@
   overflow-y: auto;
   max-height: 100vh;
 }
+/* Main Chat Wrapper */
+
 
 /* Header */
 #chat_header {

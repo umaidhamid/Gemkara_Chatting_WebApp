@@ -142,6 +142,7 @@
   #chat_section,
   #group_section {
     padding: 3px;
+    
     font-size: 0.8rem;
   }
 } /* For screens smaller than 720px */
