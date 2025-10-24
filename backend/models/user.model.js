@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
     required: true,
     select: false, // exclude password from queries by default
   },
+  Friends : [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  }],
 });
 
 // Hash password before saving

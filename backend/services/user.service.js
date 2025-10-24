@@ -38,3 +38,8 @@ export const loginUser = async ({ Email, Password }) => {
     throw error; // Re-throw to handle in controller
   }
 };
+export const getAllUsersService = async () => {
+  const users = await userModel.find({});
+  users.Password = undefined; // Hide passwords
+  return users;
+};

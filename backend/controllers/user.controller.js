@@ -59,8 +59,7 @@ export const profilecontroller = async (req, res) => {
 };
 export const logoutController = async (req, res) => {
   try {
-    const token =
-      req.cookies.authToken;
+    const token = req.cookies.authToken;
 
     if (!token) return res.status(400).json({ message: "No token provided" });
 
@@ -73,8 +72,9 @@ export const logoutController = async (req, res) => {
   }
 };
 
-export const me= (req,res)=>{
+export const me = (req, res) => {
   res.status(200).json({
-    msg:"User authenticated successfully"
-  })
-}
+    msg: "User authenticated successfully",
+    user: req.user,
+  });
+};
