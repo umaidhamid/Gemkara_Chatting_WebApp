@@ -18,7 +18,10 @@ const app = express();
 // Connect to MongoDB
 connect();
 
-// Middlewares
+// // Middlewares
+// const allowedOrigin=[
+//   "http://10.222.85.96"
+// ]
 app.use(express.json());
 app.use(cors({
    origin:"http://localhost:5173",
