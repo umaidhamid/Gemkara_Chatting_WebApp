@@ -20,7 +20,7 @@ connect();
 app.use(express.json());
 const allowedOrigins = [
   "http://localhost:5173", // Local Vite
-  "https://gemkara.vercel.app", // Vercel Frontend
+  "https://gemkara-chat.vercel.app", // Vercel Frontend
   "https://gemkara.onrender.com", // If deployed frontend on Render as well
 ];
 
